@@ -8,14 +8,14 @@ export const authApi = createApi({
     endpoints: builder => ({
         login: builder.mutation<IUser, UserLoginProps>({
             query: (body) => ({
-                url: "/v1/auth/login",
+                url: "/v1/sessions/login",
                 method: "POST",
                 body,
             })
         }),
         logout: builder.mutation({
             query: () => ({
-                url: "/v1/auth/logout",
+                url: "/v1/sessions/logout",
                 method: "DELETE"
             })
         })
